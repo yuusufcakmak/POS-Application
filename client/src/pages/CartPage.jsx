@@ -1,4 +1,4 @@
-import { Button, Card, Modal, Table } from "antd";
+import { Button, Card, Table } from "antd";
 import { useState } from "react";
 import CreateBill from "../components/cart/CreateBill.jsx";
 import Header from "../components/header/Header.jsx";
@@ -8,15 +8,15 @@ const CartPage = () => {
   const dataSource = [
     {
       key: "1",
-      name: "Mike",
-      age: 32,
-      address: "10 Downing Street",
+      name: " Yusuf",
+      age: 24,
+      address: "23 Elazığ",
     },
     {
       key: "2",
-      name: "John",
-      age: 42,
-      address: "10 Downing Street",
+      name: "Çakmak",
+      age: 66,
+      address: "56 Siirt",
     },
   ];
 
