@@ -1,6 +1,8 @@
 import React from "react";
 import Categories from "./components/categories/Categories";
 import Header from "./components/header/Header";
+import Products from "./components/products/Products";
+import CartTotals from "./components/cart/CartTotal";
 function App() {
   return (
     <>
@@ -10,10 +12,10 @@ function App() {
           <Categories />
         </div>
         <div className="products flex-[8]">
-          <div className="">products</div>
+          <Products />
         </div>
-        <div className="">
-          <div>cart totals</div>
+        <div className="cart-wrapper min-w-[300px] md:-mr-[24px] md:-mt-[24px] border">
+          <CartTotals />
         </div>
       </div>
     </>
