@@ -19,38 +19,38 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
               <div className="grid sm:grid-cols-4 grid-cols-3 gap-12">
                 <div className="text-md text-slate-500">
                   <p className="font-bold text-slate-700">Fatura Detayı:</p>
-                  <p>Unwrapped</p>
-                  <p> Fake Street 123</p>
-                  <p> San Javier </p>
-                  <p> CA 1234</p>
+                  <p>Fırat Üniversitesi</p>
+                  <p> Çaydaçıra Mahallesi</p>
+                  <p>Yeşil Bina </p>
+                  <p> Bil.Müh</p>
                 </div>
                 <div className="text-md text-slate-500">
                   <p className="font-bold text-slate-700">Fatura:</p>
-                  The Boring Company
-                  <p> Tesla Street 007</p>
-                  <p> Frisco </p>
-                  <p> CA 0000</p>
+                  Yusuf's Palace
+                  <p> Çakmak Caddesi</p>
+                  <p> Palu </p>
+                  <p> Seydilli</p>
                 </div>
                 <div className="text-md text-slate-500">
                   <div>
                     <p className="font-bold text-slate-700">Fatura numarası:</p>
-                    <p>00041</p>
+                    <p>000333</p>
                   </div>
                   <div>
                     <p className="font-bold text-slate-700 mt-2">
                       Veriliş Tarihi:
                     </p>
-                    <p>2022-11-21</p>
+                    <p>2024-11-24</p>
                   </div>
                 </div>
                 <div className="text-md text-slate-500 sm:block hidden">
                   <div>
                     <p className="font-bold text-slate-700">Şartlar:</p>
-                    <p>10 gün</p>
+                    <p>1000 gün</p>
                   </div>
                   <div>
                     <p className="font-bold text-slate-700 mt-2">Vade:</p>
-                    <p>2023-11-21</p>
+                    <p>2027-11-21</p>
                   </div>
                 </div>
               </div>
@@ -203,15 +203,7 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
               <div className="py-9">
                 <div className="border-t pt-9 border-slate-200">
                   <p className="text-sm font-light text-slate-700">
-                    Ödeme koşulları 14 gündür. Paketlenmemiş Borçların Geç
-                    Ödenmesi Yasası 0000'e göre, serbest çalışanların bu süreden
-                    sonra borçların ödenmemesi durumunda 00.00 gecikme ücreti
-                    talep etme hakkına sahip olduklarını ve bu noktada bu ücrete
-                    ek olarak yeni bir fatura sunulacağını lütfen unutmayın.
-                    Revize faturanın 14 gün içinde ödenmemesi durumunda, vadesi
-                    geçmiş hesaba ek faiz ve %8 yasal oran artı %0,5 Bank of
-                    England tabanı olmak üzere toplam %8,5 uygulanacaktır.
-                    Taraflar Kanun hükümleri dışında sözleşme yapamazlar.
+                    Ödemezseniz sizin için hiç iyi olmaz. Ödeme burada -_- -_-
                   </p>
                 </div>
               </div>
