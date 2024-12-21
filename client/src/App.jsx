@@ -1,22 +1,25 @@
-import React from "react";
-import Categories from "./components/categories/Categories";
-import Header from "./components/header/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BillPage from "./pages/BillPage";
+import CartPage from "./pages/CartPage";
+import CustomerPage from "./pages/CustomerPage";
+import HomePage from "./pages/HomePage";
+import StatisticPage from "./pages/StatisticPage";
+import Register from "./pages/auth/Register";
+import Login from "./pages/auth/Login";
+
 function App() {
   return (
-    <>
-      <Header />
-      <div className="home px-6 flex justify-between gap-10">
-        <div className="categories flex-1 overflow-auto max-h-[calc(100vh-_-112px)] pb-64">
-          <Categories />
-        </div>
-        <div className="products flex-[8]">
-          <div className="">products</div>
-        </div>
-        <div className="">
-          <div>cart totals</div>
-        </div>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/bills" element={<BillPage />} />
+        <Route path="/customers" element={<CustomerPage />} />
+        <Route path="/statistic" element={<StatisticPage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
