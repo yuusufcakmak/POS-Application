@@ -66,7 +66,7 @@ const Edit = () => {
   const deleteCategory = (id) => {
     if (window.confirm("Emin misiniz?")) {
       try {
-        fetch("http://localhost:5000/api/products/delete-product", {
+        fetch("http://localhost:5001/api/products/delete-product", {
           method: "DELETE",
           body: JSON.stringify({ categoryId: id }),
           headers: { "Content-type": "application/json; charset=UTF-8" },
