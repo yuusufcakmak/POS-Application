@@ -101,41 +101,53 @@ Proje kapsamındaki uygulamanın bazı önemli ekran görüntüleri ve açıklam
 ---
 
 ### 1️⃣ **Kayıt Ekranı**
+
 Kullanıcıların sisteme kayıt olmasını sağlayan form ekranı. Zorunlu alanlar: Kullanıcı Adı, E-mail, Şifre ve Şifre Tekrar.
+
 <img width="700" alt="Ekran Resmi 2025-01-01 23 54 21" src="https://github.com/user-attachments/assets/f14f2bb3-6c24-4acd-abd5-8f5aad7753d0" />
 
 ---
 
 ### 2️⃣ **Ana Sayfa**
+
 Ürünlerin listelendiği ana ekran. Kategoriler sol tarafta, sepetteki ürünler ise sağ tarafta görüntülenir.
+
 <img width="700" alt="Ekran Resmi 2025-01-01 23 52 06" src="https://github.com/user-attachments/assets/289b88d3-64dc-483b-89f9-ba4bf8b268ac" />
 
 
 ---
 
 ### 3️⃣ **Sepet Yönetimi**
+
 Sepet içeriğinin detaylı yönetildiği ekran. Ürünler artırılabilir veya azaltılabilir.
+
 <img width="700" alt="Ekran Resmi 2025-01-02 00 06 31" src="https://github.com/user-attachments/assets/6cbc2ddc-f659-42cc-b869-8b32384ec606" />
 
 
 ---
 
 ### 4️⃣ **Fatura Görüntüleme**
+
 Müşteri bilgilerini ve satın alınan ürünlerin detaylarını içeren fatura ekranı.
+
 <img width="700" alt="Ekran Resmi 2025-01-01 23 53 40" src="https://github.com/user-attachments/assets/81296fa2-fae5-467f-bba0-b1e21741b475" />
 
 
 ---
 
 ### 5️⃣ **Müşteri Yönetimi**
+
 Müşteri bilgilerini listeleyen yönetim ekranı. Telefon numarası ve işlem tarihi gibi detayları içerir.
+
 <img width="700" alt="Ekran Resmi 2025-01-01 23 53 54" src="https://github.com/user-attachments/assets/43764501-77d4-4227-bb86-2db9a1e7eb9c" />
 
 
 ---
 
 ### 6️⃣ **İstatistikler**
+
 Toplam satışlar, kazançlar ve diğer metrikleri gösteren bir dashboard ekranı.
+
 <img width="700" alt="Ekran Resmi 2025-01-01 23 54 04" src="https://github.com/user-attachments/assets/a3d7661d-9389-4320-8be1-31aba1946828" />
 
 ---
@@ -149,20 +161,26 @@ Sisteme giriş yapılmasını sağlayan ekran.
 ---
 
 ### 8️⃣ **Yeni Kategori Ekle**
+
 Yönetici tarafından yeni bir ürün kategorisinin oluşturulmasını sağlayan pop-up form.
+
 <img width="700" alt="Ekran Resmi 2025-01-01 23 56 14" src="https://github.com/user-attachments/assets/e917f697-a5bf-4740-b8b1-2471c62fe25e" />
 
 
 ---
 
 ### 9️⃣ **Fatura Oluştur**
+
 Müşteri bilgilerini girerek yeni bir fatura oluşturulmasını sağlayan form ekranı.
+
 <img width="700" alt="Ekran Resmi 2025-01-01 23 56 28" src="https://github.com/user-attachments/assets/d5ddf023-626b-4dfb-b7e2-43fbf472cdff" />
 
 ---
 
 ### 1️⃣0️⃣ **Yeni Ürün Ekle**
+
 Yeni bir ürünün oluşturulmasını sağlayan yönetim arayüzü.
+
 <img width="700" alt="Ekran Resmi 2025-01-01 23 56 45" src="https://github.com/user-attachments/assets/88c80326-19ac-4aff-8a60-4b345772eea4" />
 
 ---
@@ -173,6 +191,7 @@ Yeni bir ürünün oluşturulmasını sağlayan yönetim arayüzü.
 ---
 
 ## 💡 **Son Notlar**
+
 Bu proje, **POS (Point of Sale)** uygulamaları için esnek, modern ve güvenli bir çözüm sunmaktadır. Geri bildirimlerinizi ve katkılarınızı bekliyorum! 🚀
 
 ---
