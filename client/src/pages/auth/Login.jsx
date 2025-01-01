@@ -1,17 +1,64 @@
-import { Button, Carousel, Checkbox, Form, Input } from "antd";
-import { Link } from "react-router-dom";
+import { Button, Carousel, Checkbox, Form, Input, message } from "antd";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import AuthCarousel from "../../components/auth/AuthCarousel";
 import Responsive from "../../assets/admins/responsive.svg";
 import Admin from "../../assets/admins/admin.svg";
 import Customer from "../../assets/admins/customer.svg";
 import Statistic from "../../assets/admins/statistic.svg";
 const Login = () => {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const onFinish = async (values) => {
+    setLoading(true);
+    try {
+      const res = await fetch(
+        process.env.REACT_APP_SERVER_URL + "/api/auth/login",
+        {
+          method: "POST",
+          body: JSON.stringify(values),
+          headers: { "Content-type": "application/json; charset=UTF-8" },
+        }
+      );
+
+      const user = await res.json();
+
+      if (res.status === 200) {
+        localStorage.setItem(
+          "posUser",
+          JSON.stringify({
+            username: user.username,
+            email: user.email,
+          })
+        );
+        message.success("Giriş işlemi başarılı.");
+        navigate("/");
+      } else if (res.status === 404) {
+        message.error("Kullanıcı bulunamadı!");
+      } else if (res.status === 403) {
+        message.error("Şifre yanlış!");
+      }
+      setLoading(false);
+    } catch (error) {
+      message.error("Bir şeyler yanlış gitti.");
+      console.log(error);
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="h-screen">
       <div className="flex justify-between h-full">
         <div className="xl:px-20 px-10 w-full flex flex-col h-full justify-center relative">
           <h1 className="text-center text-5xl font-bold mb-2">LOGO</h1>
-          <Form layout="vertical">
+          <Form
+            layout="vertical"
+            onFinish={onFinish}
+            initialValues={{
+              remember: false,
+            }}
+          >
             <Form.Item
               label="E-mail"
               name={"email"}
@@ -48,6 +95,7 @@ const Login = () => {
                 htmlType="submit"
                 className="w-full"
                 size="large"
+                loading={loading}
               >
                 Giriş Yap
               </Button>
@@ -56,7 +104,7 @@ const Login = () => {
           <div className="flex justify-center absolute left-0 bottom-10 w-full">
             Henüz bir hesabınız yok mu?&nbsp;
             <Link to="/register" className="text-blue-600">
-              Şimdi kaydolun
+              Şimdi kaydol
             </Link>
           </div>
         </div>

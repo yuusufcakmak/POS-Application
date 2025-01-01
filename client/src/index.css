@@ -13,7 +13,13 @@ body {
 .ant-btn-primary {
   background-color: #1677ff;
 }
-
+.menu-link .anticon {
+  display: flex;
+  justify-content: center;
+}
+.products::-webkit-scrollbar {
+  display: none;
+}
 @media (min-width: 768px) {
   body {
     overflow: hidden;

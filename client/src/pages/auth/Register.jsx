@@ -1,18 +1,45 @@
-import { Button, Carousel, Form, Input } from "antd";
+import { Button, Carousel, Form, Input, message } from "antd";
 import { Link } from "react-router-dom";
 import AuthCarousel from "../../components/auth/AuthCarousel";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import Responsive from "../../assets/admins/responsive.svg";
 import Admin from "../../assets/admins/admin.svg";
 import Customer from "../../assets/admins/customer.svg";
 import Statistic from "../../assets/admins/statistic.svg";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
+  const onFinish = async (values) => {
+    setLoading(true);
+    try {
+      const res = await fetch(
+        process.env.REACT_APP_SERVER_URL + "/api/auth/register",
+        {
+          method: "POST",
+          body: JSON.stringify(values),
+          headers: { "Content-type": "application/json; charset=UTF-8" },
+        }
+      );
+      if (res.status === 200) {
+        message.success("Kayıt işlemi başarılı.");
+        navigate("/login");
+        setLoading(false);
+      }
+    } catch (error) {
+      message.error("Bir şeyler yanlış gitti.");
+      console.log(error);
+    }
+  };
+
   return (
     <div className="h-screen">
       <div className="flex justify-between h-full">
         <div className="xl:px-20 px-10 w-full flex flex-col h-full justify-center relative">
-          <h1 className="text-center text-5xl font-bold mb-2">EŞŞEKMURAT</h1>
-          <Form layout="vertical">
+          <h1 className="text-center text-5xl font-bold mb-2">LOGO</h1>
+          <Form layout="vertical" onFinish={onFinish}>
             <Form.Item
               label="Kullanıcı Adı"
               name={"username"}
@@ -52,11 +79,22 @@ const Register = () => {
             <Form.Item
               label="Şifre Tekrar"
               name={"passwordAgain"}
+              dependencies={["password"]}
               rules={[
                 {
                   required: true,
                   message: "Şifre Tekrar Alanı Boş Bırakılamaz!",
                 },
+                ({ getFieldValue }) => ({
+                  validator(_, value) {
+                    if (!value || getFieldValue("password") === value) {
+                      return Promise.resolve();
+                    }
+                    return Promise.reject(
+                      new Error("Şifreler Aynı Olmak Zorunda!")
+                    );
+                  },
+                }),
               ]}
             >
               <Input.Password />
@@ -67,6 +105,7 @@ const Register = () => {
                 htmlType="submit"
                 className="w-full"
                 size="large"
+                loading={loading}
               >
                 Kaydol
               </Button>
@@ -75,7 +114,7 @@ const Register = () => {
           <div className="flex justify-center absolute left-0 bottom-10 w-full">
             Bir hesabınız var mı?&nbsp;
             <Link to="/login" className="text-blue-600">
-              Şimdi giriş yapın
+              Şimdi giriş yap
             </Link>
           </div>
         </div>
