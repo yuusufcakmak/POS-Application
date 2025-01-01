@@ -9,3 +9,10 @@
 .menu-link.active {
   @apply !text-[#40a9ff];
 }
+.logo img {
+  display: inline-block;
+  width: 110px;
+  height: 65px;
+  object-fit: cover;
+  overflow: hidden;
+}

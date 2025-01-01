@@ -26,16 +26,16 @@ const PrintBill = ({ isModalOpen, setIsModalOpen, customer }) => {
                 <div className="text-md text-slate-500">
                   <p className="font-bold text-slate-700">Fatura Detayı:</p>
                   <p className="text-green-600">{customer?.customerName}</p>
-                  <p> Fake Street 123</p>
-                  <p> San Javier </p>
-                  <p> CA 1234</p>
+                  <p> Fırat Üniversitesi</p>
+                  <p> Mühendislik Kampüsü </p>
+                  <p> 232323</p>
                 </div>
                 <div className="text-md text-slate-500">
                   <p className="font-bold text-slate-700">Fatura:</p>
-                  The Boring Company
-                  <p> Tesla Street 007</p>
-                  <p> Frisco </p>
-                  <p> CA 0000</p>
+                  Fırat Üniversitesi
+                  <p> Gazi Caddesi</p>
+                  <p> Merkez</p>
+                  <p> PK 23300</p>
                 </div>
                 <div className="text-md text-slate-500">
                   <div>
@@ -56,7 +56,7 @@ const PrintBill = ({ isModalOpen, setIsModalOpen, customer }) => {
                   </div>
                   <div>
                     <p className="font-bold text-slate-700 mt-2">Vade:</p>
-                    <p>2023-11-21</p>
+                    <p>2024-12-21</p>
                   </div>
                 </div>
               </div>
@@ -224,7 +224,7 @@ const PrintBill = ({ isModalOpen, setIsModalOpen, customer }) => {
                     ek olarak yeni bir fatura sunulacağını lütfen unutmayın.
                     Revize faturanın 14 gün içinde ödenmemesi durumunda, vadesi
                     geçmiş hesaba ek faiz ve %8 yasal oran artı %0,5 Bank of
-                    England tabanı olmak üzere toplam %8,5 uygulanacaktır.
+                    Elazığ tabanı olmak üzere toplam %8,5 uygulanacaktır.
                     Taraflar Kanun hükümleri dışında sözleşme yapamazlar.
                   </p>
                 </div>

@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import AuthCarousel from "../../components/auth/AuthCarousel";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Responsive from "../../assets/admins/responsive.svg";
+import Admin from "../../assets/admins/admin.svg";
+import Customer from "../../assets/admins/customer.svg";
+import Statistic from "../../assets/admins/statistic.svg";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -116,22 +120,22 @@ const Register = () => {
             <div className="w-full">
               <Carousel className="!h-full px-6" autoplay>
                 <AuthCarousel
-                  img="/images/responsive.svg"
+                  img={Responsive}
                   title="Responsive"
                   desc="Tüm Cihaz Boyutlarıyla Uyumluluk"
                 />
                 <AuthCarousel
-                  img="/images/statistic.svg"
+                  img={Statistic}
                   title="İstatistikler"
                   desc="Geniş Tutulan İstatistikler"
                 />
                 <AuthCarousel
-                  img="/images/customer.svg"
+                  img={Customer}
                   title="Müşteri Memnuniyeti"
                   desc="Deneyim Sonunda Üründen Memnun Müşteriler"
                 />
                 <AuthCarousel
-                  img="/images/admin.svg"
+                  img={Admin}
                   title="Yönetici Paneli"
                   desc="Tek Yerden Yönetim"
                 />
